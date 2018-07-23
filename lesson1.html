@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Page</title>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <style>
+        #top{
+            background: #808080;
+            height: 80px;
+            display: flex;
+            /*Align content to the center vertically*/
+            align-items: center;
+            /*Align horizontally*/
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+           display: inline-block;
+           margin-right: 12px;
+        }
+
+        #top a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        #top a:hover{
+            color: red;
+            border-bottom: 1px solid red;
+        }
+        /*Styles for all sections*/
+        .xyz{
+            height: 100vh;
+            display: flex;
+            /*Align content to the center vertically*/
+            align-items: center;
+            /*Align horizontally*/
+            justify-content: center;
+        }
+
+        /*Styles for the home section*/
+        #home{
+            background:url("images/cool-background.png") #a43b31;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #ffffff;
+        }
+
+        .xyz h2,p{
+            text-align: center;
+        }
+
+        #contact{
+            background: darkslategrey;
+            color: whitesmoke;
+        }
+
+        #about{
+            background: red;
+            color: white;
+        }
+
+        #products{
+            background: seagreen;
+            color: white;
+            justify-content: space-around;
+        }
+
+        #products .item{
+            width: 24%;
+            background: #808080;
+            padding-bottom: 14px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        #products img{
+            width: 100%;
+        }
+
+        #products h2,p{
+            margin: 0;
+        }
+
+        #products h2{
+            border-bottom: 1px solid #ffffff;
+            margin-bottom: 10px;
+        }
+
+        #products .item:hover{
+            background: #a43b31;
+            color: #06b815;
+            transition: background 2s, color 1s;
+        }
+
+        @keyframes example {
+            from {background-color:  #a43b31;}
+            to {background-color: white;}
+        }
+
+        #top  a:hover{
+            animation-name: example;
+            animation-duration: 3s;
+        }
+
+        .form-div{
+            width: 30%;
+            border: 1px solid #ffffff;
+            padding: 20px;
+        }
+
+        .form-div input, textarea, button{
+            width: 100%;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        .form-div input, button{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 10px;
+        }
+
+        .form-div button{
+            background: #a43b31;
+            color: #fff;
+            border: 1px solid #ffffff;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .boxes{
+            border: 1px solid white;
+            width: 48%;
+            padding: 12px;
+            box-sizing: border-box;
+            text-align: justify;
+            color: whitesmoke;
+        }
+
+        .boxes p{
+            text-align: justify;
+        }
+
+        .boxes h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <div id="top">
+       <ul>
+           <li>
+               <a data-scroll href="#home">Home</a>
+           </li>
+           <li>
+               <a data-scroll href="#about">About</a>
+           </li>
+           <li>
+               <a data-scroll href="#contact">Contact</a>
+           </li>
+           <li>
+               <a data-scroll href="#products">Products</a>
+           </li>
+       </ul>
+  </div>
+
+  <!--Home section-->
+  <div id="home" class="xyz">
+       <div>
+           <h2>Welcome To Escrow Engineering Services</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet animi dicta dolorum eaque earum esse harum inventore, magni natus, non odit provident quam repellat sit soluta sunt voluptas voluptatibus!</p>
+       </div>
+  </div>
+
+  <!--Home section-->
+  <div id="about" class="xyz">
+      <div>
+          <h2>Welcome To Escrow Engineering Services</h2>
+          <div class="container">
+              <div class="boxes">
+                   <h3>Car Hire Services</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolorem ea explicabo facilis, inventore provident ratione suscipit tempora veritatis voluptatibus. Aliquid debitis eius est expedita, laborum molestiae molestias nam repudiandae.</p>
+              </div>
+              <div class="boxes">
+                    <h3>Sales Services</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa debitis dolorem dolores harum hic iusto maxime neque nisi perspiciatis, quae quaerat quia quo sed similique sint vero voluptas. Error, molestiae?</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!--Home section-->
+  <div id="contact"  class="xyz">
+      <div class="form-div">
+          <form action="">
+              <input type="text" placeholder="Enter Your Names">
+              <input type="email" placeholder="Enter Tour Email">
+              <input type="tel" placeholder="Your Phone Number">
+              <textarea rows="5" placeholder="Describe Yourself"></textarea>
+              <button>Submit</button>
+          </form>
+      </div>
+  </div>
+
+  <!--Home section-->
+  <div id="products"  class="xyz">
+      <div class="item">
+          <img src="images/img-1.jpg" alt="">
+          <h2>Ferrari</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet animi cupiditate distinctio dolor esse, expedita iste laudantium minima neque numquam officia, omnis qui quis saepe sapiente, sequi ut voluptatum.</p>
+      </div>
+      <div class="item">
+          <img src="images/img-2.jpg" alt="">
+          <h2>Enzo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cupiditate dicta dolore eos facere facilis fuga incidunt itaque, iure maxime modi nulla, porro possimus, provident quia tempore vel voluptate voluptatem!</p>
+      </div>
+      <div class="item">
+          <img src="images/img-3.jpg" alt="">
+          <h2>Mushpelego</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores facere molestiae natus porro possimus! Cumque doloremque eius eum expedita nam, neque quia, reiciendis rem sed tempore ullam unde vitae voluptatibus.</p>
+      </div>
+      <div class="item">
+          <img src="images/img-4.JPG" alt="">
+          <h2>Thunder</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem commodi cumque dolorum earum expedita impedit in incidunt maiores nesciunt nihil nostrum, quam ullam! Enim est quaerat similique veritatis vitae!</p>
+      </div>
+  </div>
+
+
+  <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+
+
+</body>
+</html>
